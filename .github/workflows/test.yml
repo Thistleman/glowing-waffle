@@ -1,0 +1,17 @@
+name: Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  harumph:
+    name: Harumph things
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout Repository
+
+      - name: pinging
+        run: |
+         ping http://ipinfo.io/json
